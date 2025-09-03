@@ -1,0 +1,24 @@
+name: Deploy AWS S3
+
+on:
+  push:
+    branches: 
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write # Required for OIDC authentication
+      contents: read  # Required to check out the repository
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::844216228670:role/github-actions
+          aws-region: eu-north-1
+          
+      - name: Upload to S3
+        run: |
+          aws s3 sync src/ s3://crc-dam.eu/ --delete
