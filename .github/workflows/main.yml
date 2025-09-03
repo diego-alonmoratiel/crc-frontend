@@ -22,6 +22,9 @@ jobs:
       - name: Upload to S3
         run: |
           aws s3 sync src/ s3://crc-dam.eu/ --delete
+          
+      - name: Create Invalidation in Cloudfront
+        run: |    
           aws cloudfront create-invalidation \
             --distribution-id E2KWOYMJN1MDV1 \
             --paths "/*"
