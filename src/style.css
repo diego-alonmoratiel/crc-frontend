@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  background: #fff;
+  margin: auto;
+  padding: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.contact {
+  margin-top: 10px;
+  font-size: 0.95em;
+  color: #777;
+  word-wrap: break-word;
+}
+
+h2 {
+  color: #444;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.item {
+  margin-bottom: 20px;
+}
+
+.date {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.skills li {
+  background-color: #e0e0e0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.95em;
+}
+
+/* ----------- Responsive ----------- */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .subtitle {
+    font-size: 1.1em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  .skills {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    font-size: 0.9em;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
