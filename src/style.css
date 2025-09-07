@@ -46,6 +46,14 @@ h2 {
   padding-bottom: 5px;
 }
 
+h4 {
+  color: #333;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
 .item {
   margin-bottom: 20px;
 }
@@ -96,6 +104,10 @@ ul {
 
   h2 {
     font-size: 1.2em;
+  }
+  
+  h4 {
+    font-size: 1em;
   }
 
   .skills {
